@@ -1,6 +1,6 @@
 #/bin/bash
 
-array=($(xxd -c 1 -p < bg.nam))
+array=$($(xxd -c 1 -p < bg.nam))
 table=0
 bg=0
 meta=0
@@ -89,4 +89,9 @@ do
     echo ${meta[i]}
 done
 echo "};"
+
+for ((i=0; i<240; i++))
+do
+    echo ${table[i]}
+done
 
